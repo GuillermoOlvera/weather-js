@@ -1,22 +1,23 @@
+
 export function setViewportSize($el) {
-    const viewportBlockSize = getViewport()
-    $el.style.blockSize = `${viewportBlockSize}px`
+  const viewportBlockSize = getViewport();
+  $el.style.blockSize = `${viewportBlockSize}px`;
 }
 
 export function getViewport() {
-    return window.innerHeight
+  return window.innerHeight;
 }
 
 export function onViewportResize(callback) {
-    window.addEventListener('resize', callback)
+  window.addEventListener('resize', callback);
 }
 
 export function offViewportResize(callback) {
-    window.removeEventListener('resize', callback)
+  window.removeEventListener('resize', callback)
 }
 
 export function viewportSize($el) {
-    setViewportSize($el)
+  setViewportSize($el);
 
-    onViewportResize(() => setViewportSize($el))
+  onViewportResize(() => setViewportSize($el));
 }

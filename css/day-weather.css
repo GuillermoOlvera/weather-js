@@ -44,11 +44,17 @@
 }
 
 .dayWeather-summary {
-  display: grid;
+  /* display: grid; */
+  display: none;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 1rem;
+  margin-block-end: 1rem;
 }
 
 .dayWeather-summary > * {
+}
+
+.dayWeather-summary:not([hidden]) {
+  display: grid;
 }
